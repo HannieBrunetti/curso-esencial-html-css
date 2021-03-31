@@ -1,144 +1,254 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>El Blog de Hannie</title>
+    <title>PodcastChannel</title>
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono:500&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" rel="stylesheet">
+     <!-- Logo Pestaña -->
+    <link href="assets/logo.svg" rel="icon" type="image/svg">
 </head>
-
 <body>
     <header>
-        <p>Setup</p>
-        <nav>
-            <ol>
-                <li>
-                    Google Chrome
-                </li>
-                <li>
-                    Visual Studio Code
-                </li>
-                <li>
-                    Figma
-                </li>
-                <li>
-                    GitHub
-                </li>
-            </ol>
-            <p>Conceptos esenciales del Desarrollo Web</p>
-            <ol>
-                <li>
-                    Qué es HTML
-                </li>
-                <li>
-                    Etiquetas
-                </li>
-                <li>
-                    DOM
-                </li>
-                <li>
-                    Semántica
-                </li>
-                <li>
-                    Atributos
-                </li>
-                <li>
-                    Qué es CSS
-                </li>
-            </ol>
+        <nav class="menunav-desktop">
+            <!-- MENU NAV -->
+            <div class="container">
+                <ul class="nav-items">
+                    <!-- Left -->
+                    <li>
+                        <img src="images/logo.svg" alt="Logo" class="logo">
+                    </li>
+                    <!-- Right -->
+                    <li class="nav-item">
+                        <a class="nav-item" href="#topicos">TÓPICOS</a></li>
+                    <li class="nav-item">
+                        <a class="nav-item" href="#entrevistas">ENTREVISTAS</a></li>
+                    <li class="nav-item">
+                        <a class="nav-item" href="#nosotros">NOSOTROS</a></li>
+                    <li class="nav-item">
+                        <a class="nav-item" href="#episodios">EPISODIOS</a></li>
+                </ul>
+            </div>
+        </nav>
+        <nav class="menunav-mobile">
+            <div class="collapsible-menu">
+            <input type="checkbox" id="menu">
+            <label for="menu">
+                <img src="images/logo.svg" alt="Logo" class="logo-mobile">
+                <i class="fas fa-bars"></i>
+                <i class="fa fa-times"></i>
+            </label>
+            <div class="menu-content">
+                <ul>
+                    <li>
+                        <a href="#episodios">EPISODIOS</a>
+                    </li>
+                    <li>
+                        <a href="#nosotros">NOSOTROS</a>
+                    </li>
+                    <li>
+                        <a href="#entrevistas">ENTREVISTAS</a>
+                    </li>
+                    <li>
+                        <a href="#topicos">TÓPICOS</a>
+                    </li>                    
+                </ul>
+            </div>
+        </div>
         </nav>
     </header>
-    <h1>Curso esencial de HTML y CSS</h1>
-    <p></p>Este es el inicio de tu carrera como Desarrollador Web, empezarás aprendiendo HTML y CSS para la creación de
-    contenidos, en el nivel 2 aprenderás de componentes y en 3 sobre layouts.</p>
-    <h2>Setup</h2>
-    <img src="images/google-chrome.png" alt="Logo de Google Chrome" title="Logo de Google Chrome">
-    <h3>Google Chrome</h3>
-    <p>Chrome va a ser el navegador que utilizaremos en el curso por su extenso soporte de nuevos estándares y
-        herramientas
-        de desarrollo avanzadas y de amigable uso.</p>
-    <img src="images/visual-studio-code.png" alt="Logo del editor de código Visual Studio Code"
-        title="Logo del editor de código Visual Studio Code">
-    <h3>Visual Studio Code</h3>
-    <p>Visual Studio Code es el editor de texto más popular y potente del mercado actualmente, su fácil uso y la
-        capacidad de extenderlo por medio de plugins lo hace el complemento perfecto para cualquier programador sin
-        importar el lenguaje en el que se desenvuelva.</p>
-    <img src="images/figma.png" alt="Logo de Figma" title="Logo de Figma">
-    <h3>Figma</h3>
-    <p>Figma es una la herramienta más popular en la actualidad para entregar diseños a los desarrolladores para su
-        implementación por su fácil uso porque puede ser usado directamente desde el navegador.</p>
-    <img src="images/github.png" alt="Logo de GitHub" title="Logo de GitHub">
-    <h3>GitHub</h3>
-    <p>Así como en Facebook te encuentran tus amigos, en Github te encuentran otras programadoras y programadores de
-        todo el mundo, en vez de subir fotos de tus viajes aquí subes tu código y puedes elegir hacerlo “open source” o
-        guardarlo de manera privada, Github será esencial para almacenar tu futuro portafolio.</p>
-    <hr>
-    <h2>Conceptos esenciales del Desarrollo Web</h2>
-    <h3>Qué es HTML</h3>
-    <p>Hyper Text Markup Language o Lenguaje de marcas Hipertexto. Es el componente más básico de la web. Define el
-        significado y la estructura del contenido.</p>
-    <h3>Etiquetas</h3>
-    <p>Las etiquetas HTML van a ayudarnos a brindar una estructura y semántica al contenido de nuestro website y cada
-        una tiene características y usos diferentes aunque visualmente den un resultado similar.</p>
-    <p>Muchas etiquetas son fácil de diferencias como los headings o las imágenes y otras diferentes como header,
-        footer, section o div, aquí es donde la semántica será la respuesta y si sabemos un poco de inglés también
-        podremos darnos una pequeña idea de su uso pero en este curso vamos a usar las más importantes y que serán parte
-        de tu día a día como Software Developer.</p>
-    <h3>DOM</h3>
-    <p>El Document Object Model es una estructura de árbol que representará todos nuestros proyectos web como si un
-        árbol genealógico fuera: padres, hijos, hermanos con niveles infinitos. cuando entendemos esta anidación podemos
-        identificar dependencias, herencias en css y que tan complejo es nuestro proyecto.</p>
-    <img src="images/dom.png" alt="Estructura de árbol que representa al Document Object Model">
-    <h3>Semántica</h3>
-    <p>La semántica le brinda sentido a cada elemento existen en un sitio web, algunos elementos será meramente
-        decorativos y no deben significar nada pero otros serán títulos y deberán estar en diferente jerarquías o alguna
-        secciones serán más relevantes que otras, esto ayudará a los motores de búsqueda como Google o Duck Duck Go a
-        diferenciar tu contenido, categorizar y será la herramientas más valiosa para estar en los primeros resultados
-        de búsqueda SEO. También ayudará a la accesibilidad de tu sitio web, para que personas con habilidades
-        diferentes puedan entender cada contenido.</p>
-    <h3>Atributos</h3>
-    <p>Los atributos le dan características extra a las etiquetas para complementar información y son pre programadas
-        por el navegador, algunos atributos funcionan en todas las etiquetas de la misma forma como ‘class’ pero otros
-        atributos funcionan en solo alguna etiquetas como src</p>
-    <h3>CSS</h3>
-    <p>Hojas de Estilo en Cascada (del inglés Cascading Style Sheets) o CSS es el lenguaje de estilos utilizado para
-        describir la presentación de documentos HTML</p>
-    <img src="images/css-3.png" alt="Logo de CSS">
-    <h2>Modelo de caja</h2>
-    <h3>El modelo de caja está compuesto por:</h3>
-    <p>Chrome va a ser el navegador que utilizaremos en el curso por su extenso soporte de nuevos estándares y
-        herramientas de desarrollo avanzadas y de amigable uso.</p>
-        <ol>
-            <li>
-                Tamaño del contenido / ancho y alto
-            </li>
-            <li>
-                Padding / Relleno                
-            </li>
-            <li>
-                Border / Bordes                
-            </li>
-            <li>
-                Margin / Márgenes                
-            </li>
-        </ol>
-    <h3>Propiedades físicas para el modelo de caja:</h3>
-        <ul>
-            <li>width / height</li>
-            <li>margin / margin-top | margin-right | margin-bottom | margin-left</li>
-            <li>border / border-top | border-right | border-bottom | border-left</li>
-            <li>padding / padding-top | padding-right | padding-bottom | padding-left</li>
-        </ul>
-    <h3>Propiedades lógicas para el modelo de caja:</h3>
-        <ul>
-            <li>inline-size / block-size</li>
-            <li>margin-block | margin-inline | margin-block-start | margin-block-end | margin-inline-start | margin-inline-end</li>
-            <li>border-block | border-inline | border-block-start | border-block-end | border-inline-start | border-inline-end</li>
-            <li>padding-block | padding-inline | padding-block-start | padding-block-end | padding-inline-start | padding-inline-end</li>
-        </ul>
-    <h3>Modelo de caja</h3>
-    <img src="images/img-Leo.png" alt="Imagen de Leonidas">
-</body>
-
+        <!-- Header principal -->
+        <div class="container-header">
+            <!-- Título principal -->
+            <div>
+                <h1 class="titulo">Hello</h1>
+                <h1 class="titulo line">world</h1>
+                <h1 class="titulo">pale blue dot</h1>
+                <h1 class="punto-color">.</h1>
+            </div>
+            <!-- Parráfo principal -->
+            <div>
+                <p class="texto">
+                    El portal de podcasts que explora el mundo de la programación y <br> la tecnología. Nuevos episodios, todos los jueves cada 15 días.</p>
+                <p class="texto-mobile">
+                    Un podcast que explora el mundo de la programación. Nuevos episodios, todos los jueves cada 15 días.</p>
+            </div>
+            <!-- Botón principal -->
+            <div>
+                <button class="boton boton-mobile texto-boton">
+                    <strong>CONOCÉ MÁS</strong>
+                </button>
+            </div>
+        </div>
+        <main>
+            <!-- Sección Episodios -->
+            <section class="background">
+                <!-- Título -->
+                    <h2 class="titulo-blanco titulo-margin-left titulo-blanco-mobile" id="episodios">
+                        Episodios
+                    </h2>
+                
+                <!-- Cuatro Spotify Iframes -->
+                <div class="spotify">
+                    <div>
+                        <iframe src="https://open.spotify.com/embed-podcast/episode/72VjkHbl5FCkIakeqU6EFG" width="584" height="232" allow="encrypted-media"></iframe>                        
+                    </div>
+                    <div>
+                        <iframe src="https://open.spotify.com/embed-podcast/episode/3TOIJ8M3uK7DthgLitrAmT" width="584" height="232" allow="encrypted-media"></iframe>                        
+                    </div>
+                </div>
+                <div class="spotify padding">
+                    <div>
+                        <iframe src="https://open.spotify.com/embed-podcast/episode/1IHFfhLjfib7lDrUT2FZTO" width="584" height="232" allow="encrypted-media"></iframe>                        
+                    </div>
+                    <div>
+                        <iframe src="https://open.spotify.com/embed-podcast/episode/26uCSmneIoypv704lbL2H3" width="584" height="232" allow="encrypted-media"></iframe>
+                    </div>
+                </div>
+                <br><br><br><br>
+            </section>
+            <!-- Sección de donde venimos -->
+            <section class="section2">
+                <!-- Imagen Left -->
+                    <img src="images/phone.png" alt="phone" class="phone" id="nosotros">
+                
+                <!-- Contenido Right -->
+                <div>
+                    <h2 class="titulo-negro titulo-margin-left-mobile">
+                        De dónde venimos
+                    </h2>
+                    <p class="texto texto-margin-bottom">
+                        Our posturings, our imagined self-importance,<br> the delusion that we have some privileged <br> position in the Universe, are challenged by this point <br> of pale light. 
+                    </p>
+                    <p class="texto">
+                        Our planet is a lonely speck in the great <br> enveloping cosmic dark. In our obscurity, in all <br> this vastness, there is no hint that help will <br> come from elsewhere to save us from ourselves.
+                    </p>
+                    <p class="texto-mobile2 texto-margin-bottom">
+                        Our posturings, our imagined self-importance,<br> the delusion that we have some privileged <br> position in the Universe, are challenged by this point <br> of pale light. 
+                    </p>
+                    <p class="texto-mobile2">
+                        Our planet is a lonely speck in the great <br> enveloping cosmic dark. In our obscurity, in all <br> this vastness, there is no hint that help will <br> come from elsewhere to save us from ourselves.
+                    </p>
+                </div>
+            </section>
+            <!-- Sección Invitadas/os estelares -->
+            <section id="entrevistas">
+                <!-- Título de la sección -->
+                    <h2 class="titulo-negro titulo-margin-left-mobile titulo-margin-left">Invitadas/os estelares</h2>
+                <!-- Contenido / Imágenes -->
+                <div class="container-images">
+                        <img src="images/grace-hopper.png" alt="Grace Hopper" class="images">
+                        <img src="images/Katie-Bouman.png" alt="Katie Bouman" class="images">
+                        <img src="images/Margaret_Hamilton.png" alt="Margaret Hamilton" class="images">
+                        <img src="images/An-E.R.A.Univac-1103-computer-in-the-1950s.png" alt="An E.R.A.Univac 1103 computer in the 1950s" class="images">
+                        <img src="images/Computer-operators-with-an-Eniac-the-world’s-first-programmable-general-purpose-computer.png" alt="Computer operators with an Eniac — the world’s first programmable general-purpose computer" class="images">
+                        <img src="images/susan-kare.png" alt="Susan Kare" class="images">
+                </div>
+            
+            </section>
+            <!-- Sección Algunos de nuestros temas -->
+            <section id="topicos">
+                <!-- Título de la sección -->
+                <div>
+                    <h2 class="titulo-negro titulo-margin-left titulo-margin-bottom titulo-margin-left-mobile">
+                        Algunos de nuestros temas
+                    </h2>
+                </div>
+                <!-- Contenido de la sección -->
+                <div class="container-temas">
+                    <div>
+                        <img src="images/icon1.svg" alt="Trabajo remoto" class="images2">
+                        <p class="texto2">
+                            Trabajo remoto
+                        </p>
+                    </div>
+                    <div>
+                        <img src="images/icon2.svg" alt="Repensando la programación" class="images2">
+                        <p class="texto2">
+                            Repensando la <br> programación
+                        </p>
+                    </div>
+                    <div>
+                        <img src="images/icon3.svg" alt="Bases del código" class="images2">
+                        <p class="texto2">
+                            Bases del código
+                        </p>
+                    </div>
+                    <div>
+                        <img src="images/icon4.svg" alt="Seguridad informática" class="images2">
+                        <p class="texto2">
+                            Seguridad <br> informática
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <!-- Sección ¿Querés las últimas novedades? -->
+            <section class="background2">
+                <!-- Título de la sección -->
+                <div class="">
+                    <h2 class="titulo-blanco2 titulo-centrado titulo-margin-bottom titulo-mobile1">
+                        ¿Querés las últimas novedades?
+                    </h2>
+                </div>
+                <!-- Enlace de la sección -->
+                <div>
+                    <button class="boton2 texto-boton">
+                        <strong>ESCUCHÁ LOS EPISODIOS</strong>
+                    </button>
+                </div>
+            </section>    
+        </main>
+        <!-- Footer -->
+        <footer>
+            <div>
+                <div>
+                    <ul class="nav-items2">
+                        <!-- Contenido Left -->
+                        <li class="logo2">
+                            <p class="texto">
+                                © 2019— Hello blue pale dot 
+                            </p>
+                            <p class="texto-mobile3">
+                                © 2019— Hello blue pale dot 
+                            </p>
+                        </li>
+                        <!-- Contenido Right -->
+                        <li class="nav-item2">
+                            <a class="nav-item2" href="https://web.telegram.org/" target=_blank>
+                                <i class="fab fa-telegram"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item2">
+                            <a class="nav-item2" href="https://www.facebook.com/" target=_blank>
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item2">
+                            <a class="nav-item2" href="https://twitter.com/" target=_blank>
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item2">
+                            <a class="nav-item2" href="https://www.instagram.com/" target=_blank>
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item2">
+                            <a class="nav-item2" href="https://open.spotify.com/" target=_blank>
+                                <i class="fab fa-spotify"></i>
+                            </a>
+                        </li>                            
+                    </ul>
+                </div>
+            </div>
+        </footer>    
+    </body>
 </html>
